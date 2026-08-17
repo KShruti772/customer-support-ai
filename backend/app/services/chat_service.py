@@ -1,13 +1,32 @@
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
+from uuid import uuid4
 from backend.app.conversations import store as conv_store
 from backend.app.conversations import models as conv_models
 from backend.app.orchestrator import aggregator
 from backend.app.intent.detector import IntentDetector
 from backend.app.router.router import AgentRouter
+from backend.app.agents.faq_agent import FAQAgent
+from backend.app.agents.billing_agent import BillingAgent
+from backend.app.agents.technical_agent import TechnicalAgent
+from backend.app.agents.complaint_agent import ComplaintAgent
+from backend.app.agents.product_agent import ProductAgent
+from backend.app.agents.base import AgentInput, AgentOutput
+from backend.app.llm.service import LLMService
 from dataclasses import dataclass
 import logging
 
 logger = logging.getLogger(__name__)
+
+
+class _DummyRAG:
+    """Minimal RAG implementation that returns empty results.
+
+    Used when no document corpus is indexed. Agents handle the empty
+    retrieval gracefully by falling back to LLM-only generation.
+    """
+
+    def semantic_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        return []
 
 
 @dataclass
@@ -18,8 +37,15 @@ class ChatResult:
 
 
 class ChatService:
-    def __init__(self, conversation_store: conv_store.ConversationStore = conv_store.default_store):
+    def __init__(
+        self,
+        conversation_store: conv_store.ConversationStore = conv_store.default_store,
+        llm_service: "LLMService" = None,
+        rag: "_DummyRAG" = None,
+    ):
         self.conversation_store = conversation_store
+        self.llm_service = llm_service or LLMService(provider="dummy")
+        self.rag = rag or _DummyRAG()
 
     def _load_or_create_conversation(self, session_id: Optional[str], user_id: Optional[str]):
         if session_id:
@@ -31,15 +57,75 @@ class ChatService:
             create = conv_models.ConversationCreate(user_id=user_id)
             return self.conversation_store.create_conversation(create)
 
-    def execute_agents(self, agents: List[str], user_text: str, rag_context=None):
-        # Default simple executor: returns a single assistant response echoing intent.
-        # In production, this should instantiate concrete agents and execute them (possibly concurrently).
-        outputs = []
-        for a in agents:
-            outputs.append(
-                # keep shape compatible with AgentOutput used by aggregator
-                conv_models.Message(sender="assistant", text=f"[{a}] response to: {user_text}")
-            )
+    # Agent name to class mapping — single source of truth
+    AGENT_CLASSES = {
+        "faq": FAQAgent,
+        "billing": BillingAgent,
+        "technical_support": TechnicalAgent,
+        "complaint": ComplaintAgent,
+        "product": ProductAgent,
+    }
+
+    def execute_agents(
+        self,
+        agents: List[str],
+        user_text: str,
+        rag_context=None,
+        user_id: str = "",
+        conversation_id: str = "",
+    ) -> List[AgentOutput]:
+        """Execute the given agent names against the user message.
+
+        Resolves each agent name to its class, instantiates the agent with
+        the injected LLM service and RAG wrapper, calls ``handle()`` with
+        an ``AgentInput``, and gathers the resulting ``AgentOutput`` objects.
+
+        If an agent name is unknown, a failing ``AgentOutput`` is produced
+        so the aggregator can continue without crashing.
+        """
+        outputs: List[AgentOutput] = []
+
+        for agent_name in agents:
+            agent_class = self.AGENT_CLASSES.get(agent_name)
+            if not agent_class:
+                outputs.append(
+                    AgentOutput(
+                        agent=agent_name,
+                        answer="",
+                        confidence=0.0,
+                        requires_escalation=True,
+                        sources=[],
+                        reasoning_summary=f"Unknown agent: {agent_name}",
+                    )
+                )
+                continue
+
+            try:
+                agent = agent_class(rag=self.rag, llm_service=self.llm_service)
+
+                inp = AgentInput(
+                    user_id=user_id or str(uuid4()),
+                    conversation_id=conversation_id or str(uuid4()),
+                    user_message=user_text,
+                    conversation_history=[],
+                    params={},
+                )
+
+                output: AgentOutput = agent.handle(inp)
+                outputs.append(output)
+            except Exception as e:
+                _LOG.exception("Agent %s execution failed: %s", agent_name, str(e))
+                outputs.append(
+                    AgentOutput(
+                        agent=agent_name,
+                        answer="",
+                        confidence=0.0,
+                        requires_escalation=True,
+                        sources=[],
+                        reasoning_summary=f"Agent execution failed: {str(e)}",
+                    )
+                )
+
         return outputs
 
     def chat(self, user_id: str, message: str, session_id: Optional[str] = None) -> ChatResult:
