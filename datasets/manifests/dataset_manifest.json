@@ -1,0 +1,524 @@
+{
+    "datasets": [
+        {
+            "id": "banking77",
+            "name": "BANKING77",
+            "category": "intent_detection",
+            "source": "Hugging Face Datasets / Financial Domain",
+            "purpose": [
+                "Intent classification",
+                "Customer message categorization",
+                "Agent routing"
+            ],
+            "description": "Banking sector intent classification dataset with 77 intent categories",
+            "format": "CSV",
+            "files": {
+                "train": "intent_detection/banking77/raw/train.csv",
+                "test": "intent_detection/banking77/raw/test.csv"
+            },
+            "schema": {
+                "columns": [
+                    "text",
+                    "category"
+                ],
+                "text": "Customer inquiry or statement",
+                "category": "Intent label (77 classes)"
+            },
+            "splits": {
+                "train": {
+                    "file": "intent_detection/banking77/raw/train.csv",
+                    "record_count": 10014,
+                    "size_mb": 0.8
+                },
+                "test": {
+                    "file": "intent_detection/banking77/raw/test.csv",
+                    "record_count": 3083,
+                    "size_mb": 0.23
+                }
+            },
+            "record_counts": {
+                "total": 13097,
+                "train": 10014,
+                "test": 3083
+            },
+            "size_mb": 1.03,
+            "size_gb": 0.001,
+            "project_modules": [
+                "backend/app/intent/detector.py",
+                "backend/app/agents/billing_agent.py",
+                "backend/app/agents/technical_agent.py",
+                "backend/app/agents/product_agent.py",
+                "backend/app/router/router.py"
+            ],
+            "use_cases": {
+                "training": true,
+                "evaluation": true,
+                "retrieval": false,
+                "rag_knowledge_base": false
+            },
+            "notes": "Ready for production fine-tuning. Represents real customer banking inquiries.",
+            "limitations": "Banking-specific; may not generalize to other domains.",
+            "should_commit_to_git": false,
+            "raw_data_location": "intent_detection/banking77/raw/",
+            "processed_data_location": "intent_detection/banking77/processed/",
+            "last_verified": "2026-08-16"
+        },
+        {
+            "id": "msmarco",
+            "name": "MS MARCO",
+            "category": "retrieval",
+            "source": "Microsoft Machine Reading Comprehension",
+            "purpose": [
+                "Passage retrieval corpus",
+                "Dense retriever training",
+                "Retrieval evaluation"
+            ],
+            "description": "Large-scale passage collection with queries and relevance judgments for information retrieval",
+            "format": "TSV (passages, queries, qrels)",
+            "files": {
+                "collection": "retrieval/msmarco/raw/collection.tsv",
+                "queries_train": "retrieval/msmarco/raw/queries.train.tsv",
+                "queries_dev": "retrieval/msmarco/raw/queries.dev.tsv",
+                "queries_eval": "retrieval/msmarco/raw/queries.eval.tsv",
+                "qrels_dev": "retrieval/msmarco/raw/qrels.dev.tsv"
+            },
+            "schema": {
+                "collection": {
+                    "format": "passage_id<TAB>passage_text",
+                    "columns": [
+                        "passage_id",
+                        "passage_text"
+                    ]
+                },
+                "queries": {
+                    "format": "query_id<TAB>query_text",
+                    "columns": [
+                        "query_id",
+                        "query_text"
+                    ]
+                },
+                "qrels": {
+                    "format": "query_id<TAB>0<TAB>passage_id<TAB>relevance",
+                    "columns": [
+                        "query_id",
+                        "unused",
+                        "passage_id",
+                        "relevance_score"
+                    ]
+                }
+            },
+            "splits": {
+                "collection": {
+                    "file": "retrieval/msmarco/raw/collection.tsv",
+                    "record_count": 8841823,
+                    "size_mb": 2919.74
+                },
+                "queries_train": {
+                    "file": "retrieval/msmarco/raw/queries.train.tsv",
+                    "record_count": 808731,
+                    "size_mb": 33.53
+                },
+                "queries_dev": {
+                    "file": "retrieval/msmarco/raw/queries.dev.tsv",
+                    "record_count": null,
+                    "size_mb": 4.24
+                },
+                "queries_eval": {
+                    "file": "retrieval/msmarco/raw/queries.eval.tsv",
+                    "record_count": null,
+                    "size_mb": 4.25
+                },
+                "qrels_dev": {
+                    "file": "retrieval/msmarco/raw/qrels.dev.tsv",
+                    "record_count": null,
+                    "size_mb": 1.15
+                }
+            },
+            "record_counts": {
+                "total_passages": 8841823,
+                "train_queries": 808731,
+                "relevance_judgments": "Unknown"
+            },
+            "size_mb": 2962.91,
+            "size_gb": 2.89,
+            "project_modules": [
+                "backend/app/rag/pipeline.py",
+                "backend/app/rag/faiss_index.py",
+                "backend/app/rag/embeddings.py",
+                "backend/app/agents/faq_agent.py"
+            ],
+            "use_cases": {
+                "training": true,
+                "evaluation": true,
+                "retrieval": true,
+                "rag_knowledge_base": true
+            },
+            "notes": "Large-scale collection suitable for dense retriever training and evaluation. Covers diverse topics (web, academic content). Consider domain filtering for customer support.",
+            "limitations": "Very large collection (2.9 GB); requires efficient indexing (FAISS, Elasticsearch). Passages may not be customer-support-specific. Topics are diverse (general knowledge).",
+            "should_commit_to_git": false,
+            "raw_data_location": "retrieval/msmarco/raw/",
+            "processed_data_location": "retrieval/msmarco/processed/",
+            "preprocessing_notes": "Requires FAISS indexing, embedding generation, and optional domain filtering",
+            "last_verified": "2026-08-16"
+        },
+        {
+            "id": "squad",
+            "name": "SQuAD (v1.1 and v2.0)",
+            "category": "qa_datasets",
+            "source": "Stanford Question Answering Dataset",
+            "purpose": [
+                "Question-answering evaluation",
+                "Knowledge base augmentation",
+                "QA model training"
+            ],
+            "description": "Large-scale extractive QA dataset with Wikipedia passages (v1.1 all answerable, v2.0 includes unanswerable)",
+            "format": "JSON (SQuAD format)",
+            "files": {
+                "train_v1.1": "qa_datasets/squad/raw/train-v1.1.json",
+                "dev_v1.1": "qa_datasets/squad/raw/dev-v1.1.json",
+                "train_v2.0": "qa_datasets/squad/raw/train-v2.0.json",
+                "dev_v2.0": "qa_datasets/squad/raw/dev-v2.0.json"
+            },
+            "schema": {
+                "structure": "SQuAD format",
+                "root_key": "data",
+                "article": {
+                    "title": "Article title",
+                    "paragraphs": [
+                        {
+                            "context": "Passage text",
+                            "qas": [
+                                {
+                                    "question": "Question text",
+                                    "id": "Unique question ID",
+                                    "answers": [
+                                        {
+                                            "text": "Answer text",
+                                            "answer_start": "Character offset"
+                                        }
+                                    ],
+                                    "is_impossible": "Boolean (v2.0 only)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "splits": {
+                "train_v1.1": {
+                    "file": "qa_datasets/squad/raw/train-v1.1.json",
+                    "record_count": 87599,
+                    "size_mb": 28.89,
+                    "answerable": "100%"
+                },
+                "dev_v1.1": {
+                    "file": "qa_datasets/squad/raw/dev-v1.1.json",
+                    "record_count": 10570,
+                    "size_mb": 4.63,
+                    "answerable": "100%"
+                },
+                "train_v2.0": {
+                    "file": "qa_datasets/squad/raw/train-v2.0.json",
+                    "record_count": 130319,
+                    "size_mb": 40.17,
+                    "answerable": "~50%"
+                },
+                "dev_v2.0": {
+                    "file": "qa_datasets/squad/raw/dev-v2.0.json",
+                    "record_count": 11873,
+                    "size_mb": 4.17,
+                    "answerable": "~50%"
+                }
+            },
+            "record_counts": {
+                "train_v1.1": 87599,
+                "dev_v1.1": 10570,
+                "train_v2.0": 130319,
+                "dev_v2.0": 11873,
+                "total": 240361
+            },
+            "size_mb": 77.86,
+            "size_gb": 0.076,
+            "project_modules": [
+                "backend/app/rag/pipeline.py",
+                "backend/app/agents/faq_agent.py",
+                "backend/tests/test_rag_pipeline.py"
+            ],
+            "use_cases": {
+                "training": true,
+                "evaluation": true,
+                "retrieval": false,
+                "rag_knowledge_base": true
+            },
+            "version_comparison": {
+                "v1.1": {
+                    "description": "All questions are answerable",
+                    "difficulty": "Easier",
+                    "use_case": "Baseline evaluation"
+                },
+                "v2.0": {
+                    "description": "Includes unanswerable questions",
+                    "difficulty": "Harder",
+                    "use_case": "Production-ready evaluation"
+                }
+            },
+            "notes": "Wikipedia-based QA dataset. Useful for baseline evaluation and knowledge base augmentation. v2.0 recommended for challenging evaluation.",
+            "limitations": "General knowledge (Wikipedia topics); NOT domain-specific to customer support or finance. Better for baseline evaluation than customer-facing agents.",
+            "should_commit_to_git": false,
+            "raw_data_location": "qa_datasets/squad/raw/",
+            "processed_data_location": "qa_datasets/squad/processed/",
+            "last_verified": "2026-08-16"
+        },
+        {
+            "id": "complaints",
+            "name": "CFPB Consumer Complaint Database",
+            "category": "customer_support",
+            "subcategory": "complaints",
+            "source": "Consumer Financial Protection Bureau (CFPB)",
+            "purpose": [
+                "Domain-specific knowledge base",
+                "Intent/issue classification",
+                "Complaint routing",
+                "Response generation training",
+                "End-to-end system evaluation"
+            ],
+            "description": "Real-world financial consumer complaints with categorization, company responses, and resolution metadata",
+            "format": "CSV",
+            "files": {
+                "complaints": "customer_support/complaints/raw/complaints.csv"
+            },
+            "schema": {
+                "columns": [
+                    "Date received",
+                    "Product",
+                    "Sub-product",
+                    "Issue",
+                    "Sub-issue",
+                    "Consumer complaint narrative",
+                    "Company public response",
+                    "Company",
+                    "State",
+                    "ZIP code",
+                    "Tags",
+                    "Submitted via",
+                    "Date sent to company",
+                    "Company response to consumer",
+                    "Timely response?",
+                    "Complaint ID"
+                ],
+                "key_fields": {
+                    "Consumer complaint narrative": "Main complaint text (primary NLU source)",
+                    "Product": "Product category (e.g., Checking account, Credit card)",
+                    "Sub-product": "Product subcategory",
+                    "Issue": "Primary issue category",
+                    "Sub-issue": "Secondary issue category",
+                    "Company response to consumer": "Resolution or response type",
+                    "Timely response?": "Yes/No - service quality metric"
+                }
+            },
+            "splits": {
+                "all": {
+                    "file": "customer_support/complaints/raw/complaints.csv",
+                    "record_count": 23346984,
+                    "size_mb": 8702.36
+                }
+            },
+            "record_counts": {
+                "total": 23346984,
+                "train": "Not pre-split",
+                "dev": "Not pre-split",
+                "test": "Not pre-split"
+            },
+            "size_mb": 8702.36,
+            "size_gb": 8.5,
+            "project_modules": [
+                "backend/app/intent/detector.py",
+                "backend/app/agents/complaint_agent.py",
+                "backend/app/services/chat_service.py",
+                "backend/app/rag/pipeline.py",
+                "backend/app/router/router.py"
+            ],
+            "use_cases": {
+                "training": true,
+                "evaluation": true,
+                "retrieval": true,
+                "rag_knowledge_base": true
+            },
+            "domain_relevance": "HIGHLY RELEVANT - Financial customer support domain",
+            "notes": "23M+ real customer complaints from major US financial institutions. PII is masked. Reflects real pain points and resolutions. CRITICAL dataset for production customer support agents.",
+            "limitations": "⚠️ VERY LARGE (8.7 GB). Requires sampling or streaming for local development. Contains natural complaint language with potential profanity/frustration. Not anonymized (companies named).",
+            "should_commit_to_git": false,
+            "raw_data_location": "customer_support/complaints/raw/",
+            "processed_data_location": "customer_support/complaints/processed/",
+            "preprocessing_recommendations": "Sample for local dev (0.1-1%), stratify by Product/Issue, clean text, extract features",
+            "last_verified": "2026-08-16"
+        },
+        {
+            "id": "multilingual_dialogues",
+            "name": "Multilingual Dialogue Dataset",
+            "category": "customer_support",
+            "subcategory": "dialogues",
+            "source": "Academic Dialogue Research",
+            "purpose": [
+                "Multilingual agent training",
+                "Conversational quality evaluation",
+                "Dialogue emotion/intent analysis",
+                "End-to-end conversation evaluation"
+            ],
+            "description": "Multilingual dialogue dataset with train/dev/test splits in 4 languages (EN, DE, IT, ZH)",
+            "format": "Text (dialogue format) with optional metadata",
+            "files": {
+                "en_train": "customer_support/dialogues/raw/multilingual/en/en_train_human.txt",
+                "en_dev": "customer_support/dialogues/raw/multilingual/en/en_dev_human.txt",
+                "en_test": "customer_support/dialogues/raw/multilingual/en/en_test_human.txt",
+                "de_train": "customer_support/dialogues/raw/multilingual/de/de_train_human.txt",
+                "de_dev": "customer_support/dialogues/raw/multilingual/de/de_dev_human.txt",
+                "de_test": "customer_support/dialogues/raw/multilingual/de/de_test_human.txt",
+                "it_train": "customer_support/dialogues/raw/multilingual/it/it_train_human.txt",
+                "it_dev": "customer_support/dialogues/raw/multilingual/it/it_dev_human.txt",
+                "it_test": "customer_support/dialogues/raw/multilingual/it/it_test_human.txt",
+                "zh_train": "customer_support/dialogues/raw/multilingual/zh/zh_train_human.txt",
+                "zh_dev": "customer_support/dialogues/raw/multilingual/zh/zh_dev_human.txt",
+                "zh_test": "customer_support/dialogues/raw/multilingual/zh/zh_test_human.txt",
+                "metadata": "customer_support/dialogues/raw/metadata/1k_part_data/",
+                "loader": "customer_support/dialogues/dataset.py"
+            },
+            "languages": [
+                "en",
+                "de",
+                "it",
+                "zh"
+            ],
+            "schema": {
+                "format": "Text dialogue with turn separators",
+                "turn_separator": "__eou__",
+                "metadata_available": [
+                    "emotion",
+                    "action/intent",
+                    "topic"
+                ],
+                "structure": "Dialogue text __eou__ Dialogue text __eou__ ... [metadata]"
+            },
+            "splits": {
+                "english": {
+                    "train": {
+                        "file": "customer_support/dialogues/raw/multilingual/en/en_train_human.txt",
+                        "size_mb": 5.83
+                    },
+                    "dev": {
+                        "file": "customer_support/dialogues/raw/multilingual/en/en_dev_human.txt",
+                        "size_mb": 0.56
+                    },
+                    "test": {
+                        "file": "customer_support/dialogues/raw/multilingual/en/en_test_human.txt",
+                        "size_mb": 0.55
+                    }
+                },
+                "german": {
+                    "train": {
+                        "file": "customer_support/dialogues/raw/multilingual/de/de_train_human.txt",
+                        "size_mb": 6.04
+                    },
+                    "dev": {
+                        "file": "customer_support/dialogues/raw/multilingual/de/de_dev_human.txt",
+                        "size_mb": 0.58
+                    },
+                    "test": {
+                        "file": "customer_support/dialogues/raw/multilingual/de/de_test_human.txt",
+                        "size_mb": 0.57
+                    }
+                },
+                "italian": {
+                    "train": {
+                        "file": "customer_support/dialogues/raw/multilingual/it/it_train_human.txt",
+                        "size_mb": 5.56
+                    },
+                    "dev": {
+                        "file": "customer_support/dialogues/raw/multilingual/it/it_dev_human.txt",
+                        "size_mb": 0.55
+                    },
+                    "test": {
+                        "file": "customer_support/dialogues/raw/multilingual/it/it_test_human.txt",
+                        "size_mb": 0.53
+                    }
+                },
+                "chinese": {
+                    "train": {
+                        "file": "customer_support/dialogues/raw/multilingual/zh/zh_train_human.txt",
+                        "size_mb": 4.97
+                    },
+                    "dev": {
+                        "file": "customer_support/dialogues/raw/multilingual/zh/zh_dev_human.txt",
+                        "size_mb": 0.5
+                    },
+                    "test": {
+                        "file": "customer_support/dialogues/raw/multilingual/zh/zh_test_human.txt",
+                        "size_mb": 0.48
+                    }
+                }
+            },
+            "record_counts": {
+                "total_approximate": 20000,
+                "per_language": "~5000 dialogues per language"
+            },
+            "size_mb": 25.72,
+            "size_gb": 0.025,
+            "project_modules": [
+                "backend/app/services/chat_service.py",
+                "backend/tests/test_api_chat.py",
+                "backend/app/agents/base.py"
+            ],
+            "use_cases": {
+                "training": true,
+                "evaluation": true,
+                "retrieval": false,
+                "rag_knowledge_base": false
+            },
+            "language_coverage": {
+                "en": "English",
+                "de": "German",
+                "it": "Italian",
+                "zh": "Chinese/Mandarin"
+            },
+            "metadata_types": {
+                "emotion": "Emotional sentiment (available in 1k subset)",
+                "action": "Intent/action labels (available in 1k subset)",
+                "topic": "Conversation topic (available in 1k subset)"
+            },
+            "notes": "Supports multilingual customer support. Train/dev/test splits pre-defined per language. Metadata available for subset. Hugging Face datasets loader included.",
+            "limitations": "Full metadata only for 1k subset. Dialogue format requires parsing. Language quality varies by language.",
+            "should_commit_to_git": false,
+            "raw_data_location": "customer_support/dialogues/raw/",
+            "processed_data_location": "customer_support/dialogues/processed/",
+            "loader_script": "customer_support/dialogues/dataset.py",
+            "loader_usage": "Load via Hugging Face datasets with custom loader script",
+            "last_verified": "2026-08-16"
+        }
+    ],
+    "metadata": {
+        "total_datasets": 5,
+        "total_size_gb": 11.6,
+        "total_files": 31,
+        "categories": [
+            "intent_detection",
+            "retrieval",
+            "qa_datasets",
+            "customer_support"
+        ],
+        "last_updated": "2026-08-16",
+        "status": "Phase 1-5 Complete: Organized and Documented",
+        "warnings": [
+            "Complaints dataset is very large (8.7 GB) - sample for local development",
+            "MS MARCO collection is 2.9 GB - requires efficient indexing",
+            "SQuAD and MS MARCO are not domain-specific to customer support",
+            "All raw datasets should NOT be committed to Git"
+        ],
+        "next_steps": [
+            "Sample large datasets for local development",
+            "Create FAISS indices for MS MARCO",
+            "Generate embeddings for retrieval",
+            "Split complaints by Product/Issue for training",
+            "Test end-to-end with multilingual dialogues"
+        ]
+    }
+}

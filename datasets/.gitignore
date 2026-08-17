@@ -1,0 +1,123 @@
+# Datasets .gitignore
+# This file prevents large dataset files from being committed to Git
+# while allowing documentation and metadata to be committed
+
+# ============================================================================
+# IGNORE ALL DATA FILES (Large, Raw, Processed)
+# ============================================================================
+
+# Intent Detection
+intent_detection/banking77/raw/**
+intent_detection/banking77/processed/**
+!intent_detection/banking77/.gitkeep
+!intent_detection/banking77/raw/.gitkeep
+!intent_detection/banking77/processed/.gitkeep
+
+# Retrieval (MS MARCO - Very Large)
+retrieval/msmarco/raw/**
+retrieval/msmarco/processed/**
+!retrieval/msmarco/.gitkeep
+!retrieval/msmarco/raw/.gitkeep
+!retrieval/msmarco/processed/.gitkeep
+
+# QA Datasets
+qa_datasets/squad/raw/**
+qa_datasets/squad/processed/**
+!qa_datasets/squad/.gitkeep
+!qa_datasets/squad/raw/.gitkeep
+!qa_datasets/squad/processed/.gitkeep
+
+# Customer Support - Complaints (Very Large)
+customer_support/complaints/raw/**
+customer_support/complaints/processed/**
+!customer_support/complaints/.gitkeep
+!customer_support/complaints/raw/.gitkeep
+!customer_support/complaints/processed/.gitkeep
+
+# Customer Support - Dialogues
+customer_support/dialogues/raw/**
+customer_support/dialogues/processed/**
+!customer_support/dialogues/.gitkeep
+!customer_support/dialogues/raw/.gitkeep
+!customer_support/dialogues/processed/.gitkeep
+
+# ============================================================================
+# ALLOW DOCUMENTATION & METADATA (Small, Informative)
+# ============================================================================
+
+# DO COMMIT these files:
+# - README.md files at any level
+# - dataset_manifest.json and registry.json
+# - .gitkeep (preserves directory structure)
+# - YAML/JSON configuration files for datasets
+
+!README.md
+!manifests/dataset_manifest.json
+!manifests/registry.json
+!manifests/README.md
+!*/README.md
+!*/metadata.json
+!*/.gitkeep
+
+# ============================================================================
+# IGNORE COMMON PROCESSED ARTIFACTS
+# ============================================================================
+
+# FAISS indices (can be regenerated)
+*.faiss
+*.ivfdata
+*.index
+
+# Embeddings and vectors (large)
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Processed/cached data
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+__pycache__/
+*.pyc
+
+# Large model checkpoints
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# ============================================================================
+# EXCEPTIONS FOR VERSION CONTROL
+# ============================================================================
+
+# If you create small metadata or configuration files, keep them committed:
+# - Sampling configuration
+# - Data preprocessing scripts
+# - Dataset statistics
+
+# Example: This would be OK to commit
+# !datasets/manifests/sampling_config.json
+
+# ============================================================================
+# EXPLANATION
+# ============================================================================
+# 
+# Raw datasets directory structure is preserved via .gitkeep files
+# but actual data files are ignored.
+# 
+# This allows developers to:
+# 1. Clone the repository with git structure intact
+# 2. Run preprocessing/download scripts independently
+# 3. Keep large files out of version control
+# 4. Still track documentation and metadata
+# 
+# To generate processed files locally:
+#   python scripts/preprocess_datasets.py
+#

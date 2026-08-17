@@ -1,0 +1,18 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
+argon2-cffi>=21.1.0
+pydantic<2.0.0
+motor>=3.7.0
+langchain>=0.0.200
+# Document parsing, embeddings and vector store
+pypdf>=3.10.0
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+openai>=1.0.0
+httpx>=0.23.0,<0.24.0
+tenacity>=8.2.2
+# AI / embeddings / FAISS: on Windows consider using conda for faiss
+# Testing
+pytest==7.4.3
