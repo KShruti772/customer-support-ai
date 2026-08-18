@@ -1,5 +1,6 @@
 from typing import Optional, List, Dict, Any
 from uuid import uuid4
+from pathlib import Path
 from backend.app.conversations import store as conv_store
 from backend.app.conversations import models as conv_models
 from backend.app.orchestrator import aggregator
@@ -12,21 +13,11 @@ from backend.app.agents.complaint_agent import ComplaintAgent
 from backend.app.agents.product_agent import ProductAgent
 from backend.app.agents.base import AgentInput, AgentOutput
 from backend.app.llm.service import LLMService
+from backend.app.rag.pipeline import RAGPipeline
 from dataclasses import dataclass
 import logging
 
 logger = logging.getLogger(__name__)
-
-
-class _DummyRAG:
-    """Minimal RAG implementation that returns empty results.
-
-    Used when no document corpus is indexed. Agents handle the empty
-    retrieval gracefully by falling back to LLM-only generation.
-    """
-
-    def semantic_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-        return []
 
 
 @dataclass
@@ -41,11 +32,23 @@ class ChatService:
         self,
         conversation_store: conv_store.ConversationStore = conv_store.default_store,
         llm_service: "LLMService" = None,
-        rag: "_DummyRAG" = None,
+        rag: RAGPipeline = None,
     ):
         self.conversation_store = conversation_store
         self.llm_service = llm_service or LLMService(provider="dummy")
-        self.rag = rag or _DummyRAG()
+        # Initialize RAGPipeline with docs/ corpus if not provided
+        if rag is not None:
+            self.rag = rag
+        else:
+            docs_dir = Path(__file__).resolve().parent.parent / "docs"
+            self.rag = RAGPipeline(
+                source_folder=str(docs_dir),
+                index_path=str(docs_dir / "faiss.index"),
+                embedding_model_name="dummy",
+                chunk_size=500,
+                chunk_overlap=50,
+            )
+        self.rag.build_index(rebuild=False)
 
     def _load_or_create_conversation(self, session_id: Optional[str], user_id: Optional[str]):
         if session_id:
@@ -147,14 +150,10 @@ class ChatService:
 
         agents = routing.get("agents") or ["faq"]
 
-        # retrieve RAG context - pipeline exists but may be heavy; call if available
+        # retrieve RAG context from the initialized pipeline
         rag_context = None
         try:
-            from backend.app.rag.pipeline import RAGPipeline
-
-            # placeholder: you would call semantic search with user query and agents' contexts
-            rag = RAGPipeline()
-            rag_context = rag.semantic_search(message, top_k=3)
+            rag_context = self.rag.semantic_search(message, top_k=3)
         except Exception:
             logger.debug("RAG pipeline unavailable or failed, continuing without context")
 

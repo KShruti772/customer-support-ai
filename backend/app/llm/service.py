@@ -5,6 +5,7 @@ import logging
 from typing import List, Dict, Any, Optional
 
 from .providers.dummy_provider import DummyProvider
+from .providers.openai_provider import OpenAIProvider
 
 _LOG = logging.getLogger(__name__)
 
@@ -13,11 +14,14 @@ class LLMService:
     """Provider-agnostic LLM service. Instantiate with a provider name and it will use the provider wrapper.
 
     Provider-specific code lives in `providers/`.
+    The provider is selected by the ``ASTRA_LLM_PROVIDER`` environment variable
+    (defaults to ``"dummy"``). When ``"openai"`` is selected, the ``OPENAI_API_KEY``
+    environment variable must be set.
     """
 
-    def __init__(self, provider: str = "dummy", **kwargs):
-        self.provider_name = provider
-        self.provider = self._get_provider(provider, **kwargs)
+    def __init__(self, provider: str = None, **kwargs):
+        self.provider_name = provider or os.getenv("ASTRA_LLM_PROVIDER", "dummy")
+        self.provider = self._get_provider(self.provider_name, **kwargs)
 
     def _get_provider(self, provider: str, **kwargs):
         if provider == "openai":

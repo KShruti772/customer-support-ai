@@ -4,6 +4,7 @@ import logging
 import os
 from backend.app.api import conversations, auth, chat
 from backend.app.middleware.rate_limit import RateLimitMiddleware
+from backend.app.db import mongodb
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 logging.basicConfig(level=LOG_LEVEL)
@@ -40,9 +41,22 @@ else:
     )
 
 
+@app.on_event("startup")
+async def startup_db_client():
+    await mongodb.connect()
+    if not mongodb.is_connected():
+        _LOG.warning("MongoDB not connected — persistence features will use in-memory fallback")
+
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    await mongodb.disconnect()
+
+
 @app.get("/health")
 async def health():
-    return {"status": "ok"}
+    db_status = "connected" if mongodb.is_connected() else "disconnected"
+    return {"status": "ok", "mongodb": db_status}
 
 
 app.include_router(auth.router)

@@ -5,7 +5,7 @@ import logging
 from typing import List, Dict, Any
 
 import openai
-from openai.error import RateLimitError, OpenAIError
+from openai import RateLimitError, APIError
 
 _LOG = logging.getLogger(__name__)
 
@@ -55,6 +55,6 @@ class OpenAIProvider:
                 backoff = 2 ** attempt
                 time.sleep(backoff)
                 continue
-            except OpenAIError as e:
+            except APIError as e:
                 _LOG.exception("OpenAI API error: %s", str(e))
                 raise

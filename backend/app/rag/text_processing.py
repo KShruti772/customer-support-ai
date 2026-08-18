@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import List
-from langchain.text_splitter import CharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter
 
 
 def clean_text(text: str) -> str:

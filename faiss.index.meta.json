@@ -1,0 +1,380 @@
+[
+  {
+    "doc_id": "billing.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\billing.md",
+    "file_ext": ".md",
+    "text": "# Billing & Subscriptions - AstraHome Support\n## Payment Issues\n### Common Billing Questions\n**\"I was charged twice for my subscription\"**\n- This can occur if the subscription was renewed on both the old and new billing cycles\n- Check your bank statement for duplicate charges 3-5 days apart\n- Contact support@astrahome.com with the transaction IDs for a refund\n**\"My payment was declined\"**\n- Ensure your payment method has sufficient funds\n- Verify the card expiration date is current"
+  },
+  {
+    "doc_id": "billing.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\billing.md",
+    "file_ext": ".md",
+    "text": "- Verify the card expiration date is current\n- Update your payment method in the AstraHome app\n- If using a new card, the first transaction may be flagged as suspicious - this is normal\n**\"I canceled but was still charged\"**\n- Subscriptions renew up to 24 hours before the billing date\n- Cancellation immediately stops auto-renewal, but access continues until the end of the billing period\n- Refunds for canceled subscriptions must be requested within 30 days of the charge\n### Invoice Requests"
+  },
+  {
+    "doc_id": "billing.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\billing.md",
+    "file_ext": ".md",
+    "text": "### Invoice Requests\n**\"How do I get an invoice\"**\n- Invoices are automatically emailed at the start of each billing cycle\n- To request a past invoice, contact support@astrahome.com with your order number\n- Invoices are also available for download in the AstraHome app under \"Billing History\"\n### Subscription Management\n**\"How do I upgrade my subscription\"**\n- Go to Account → Subscriptions in the AstraHome app\n- Select the new plan and confirm"
+  },
+  {
+    "doc_id": "billing.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\billing.md",
+    "file_ext": ".md",
+    "text": "- Select the new plan and confirm\n- Upgrades take effect immediately; remaining time on current plan is credited\n**\"How do I downgrade my subscription\"**\n- Same process as upgrading; select the lower-tier plan\n- Downgrades take effect at the end of the current billing period\n- You'll retain access to current plan features until the downgrade date\n**\"How do I cancel my subscription\"**\n- Go to Account → Subscriptions → Cancel Subscription\n- Cancellation stops auto-renewal immediately"
+  },
+  {
+    "doc_id": "billing.md",
+    "chunk_index": 4,
+    "source_path": "D:\\customer-support-ai\\docs\\billing.md",
+    "file_ext": ".md",
+    "text": "- Cancellation stops auto-renewal immediately\n- You retain access until the end of your paid billing period\n- Refunds must be requested within 30 days of cancellation\n### Taxes\n- Sales tax is calculated based on your billing address\n- VAT/GST applies for customers in applicable regions\n- Tax-exempt customers should submit documentation to billing@astrahome.com"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "# Complaints & Escalation - AstraHome Support\n## How to File a Complaint\n### Submit a Complaint\n**Email**: complaints@astrahome.com\n**Information to include**:\n- Order number (required)\n- Product name and model (required)\n- Detailed description of the issue (required)\n- Photos or videos of the problem (if applicable)\n- Your contact information (optional but helpful)\n- Desired resolution\n**Online form**: Visit support.astrahome.com/complaint and complete the submission form"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "**Phone**: 1-800-ASTRA-HOME (available 8AM-8PM EST, Monday-Friday)\n### Complaint Acknowledgement\n- You will receive an email acknowledgment within 2 business days\n- A complaint ID will be assigned and included in the acknowledgment\n- Initial response from customer service within 5 business days\n- Full resolution timeline: typically 10-15 business days, depending on complexity\n### What Happens After Submission\n1. **Review**: Complaints team reviews within 2 business days"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "2. **Classification**: Issue categorized (product quality, shipping, billing, performance, etc.)\n3. **Acknowledgment**: Email sent with complaint ID and expected timeline\n4. **Investigation**: Relevant department investigates (quality, logistics, billing, etc.)\n5. **Resolution**: Proposed resolution communicated via email\n6. **Confirmation**: Customer confirms or provides feedback on resolution\n### Complaint Categories & Typical Resolution Times"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "| Category | Typical Resolution | Escalation Trigger |\n|----------|-------------------|-------------------|\n| Product quality | 5-7 business days | Issue affects safety or multiple units |\n| Shipping damage | 3-5 business days | High-value item or repeat occurrence |\n| Billing errors | 3-5 business days | Involves disputed charges over $100 |\n| Performance issues | 7-10 business days | Requires technical investigation |"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 4,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "| Installation problems | 5-7 business days | Requires professional assessment |\n### Escalation Process\nIf your complaint is not resolved within the stated timeline, or if you are dissatisfied with the resolution:\n**Step 1**: Request escalation via reply to the complaint acknowledgment email\n- Your complaint will be reassigned to a senior specialist\n- Response within 3 business days\n**Step 2**: Management review\n- If still unresolved, request escalation to management"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 5,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "- Response within 5 business days\n- Management may offer: full refund, account credit, replacement product, or service extension\n**Step 3**: Executive office\n- Final escalation level\n- Response within 7-10 business days\n- May include: significant account credit, product replacement, or public apology\n### Complaint Handling Principles\n- **Fairness**: All complaints treated equally regardless of customer status\n- **Timeliness**: Commitment to response timelines above"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 6,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "- **Accountability**: Clear complaint ID tracking throughout process\n- **Confidentiality**: Customer information handled according to privacy policy\n- **Continuous improvement**: Complaints used to improve products and processes\n### What Is NOT Considered a Complaint\nThe following are handled through different channels:\n| Issue | Correct Channel |\n|-------|----------------|\n| Product questions | support@astrahome.com |\n| Technical setup | support@astrahome.com |"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 7,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "| Technical setup | support@astrahome.com |\n| Subscription questions | billing@astrahome.com |\n| Returns (non-defective) | support@astrahome.com |\n| General inquiries | contact@astrahome.com |\n### Feedback Improvement\nAll complaints are reviewed weekly by the product team to identify:\n- Recurring issues\n- Product design improvements\n- Process improvements\n- Training needs for customer service\nAnonymous trend data is shared with the product team weekly.\n---"
+  },
+  {
+    "doc_id": "complaints.md",
+    "chunk_index": 8,
+    "source_path": "D:\\customer-support-ai\\docs\\complaints.md",
+    "file_ext": ".md",
+    "text": "---\n**We take all complaints seriously**. Your feedback helps us improve AstraHome products and services for all customers."
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "# Frequently Asked Questions - AstraHome Support\n## General Questions\n### Q: How do I reset my password?\n**A**: Use the \"Forgot Password\" link on the login page. Enter your email or username, and you'll receive a password reset link via email. If you don't receive the email within 10 minutes, check your spam folder or contact support@astrahome.com.\n### Q: How do I contact AstraHome support?\n**A**: \n- Email: support@astrahome.com (response within 2 business days)"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "- Phone: 1-800-ASTRA-HOME (8AM-8PM EST, Monday-Friday)\n- Live chat: support.astrahome.com (available 24/7 for basic inquiries)\n- Mail: AstraHome Support, 123 Tech Park Drive, San Jose, CA 95134\n### Q: How do I create an account?\n**A**: Download the AstraHome app and select \"Sign Up\". You'll need to provide:\n- Email address\n- Create a password\n- Accept terms of service and privacy policy\n- Verify your email via the link sent to your inbox\n### Q: Does AstraHome sell customer data?"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: Does AstraHome sell customer data?\n**A**: No. AstraHome does not sell customer data to third parties. Personal information is used solely for account management, service provision, and as described in our privacy policy. We may share data with trusted service providers who perform functions on our behalf, under strict confidentiality agreements.\n## Account & Login\n### Q: I'm locked out of my account after too many failed login attempts"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "**A**: Account lockout lasts 30 minutes for security reasons. After 30 minutes, you can attempt to log in again. If you continue to have issues, contact support@astrahome.com.\n### Q: Can I have multiple users on one account?\n**A**: Yes. The primary account holder can add family members or shared users through the AstraHome app. Each shared user has their own login and can view only the cameras and settings granted access to.\n### Q: How do I change my email address?"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 4,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: How do I change my email address?\n**A**: Go to Account → Profile → Edit Email in the AstraHome app. You'll receive a verification link at the new email address. The change is finalized after clicking the link.\n### Q: I forgot my registered email address\n**A**: Contact support@astrahome.com with your order number and name. They can look up your account associated with your purchase.\n## Product Questions\n### Q: Which WiFi frequency should I use for my camera?"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 5,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "**A**: Cameras support 2.4GHz only. While 5GHz offers faster speeds, it has shorter range and is not compatible with most security cameras. Use 2.4GHz for reliable connectivity.\n### Q: How many cameras can I have on one account?\n**A**: \n- Free tier: Up to 3 cameras\n- Basic subscription: Up to 5 cameras\n- Pro subscription: Up to 10 cameras\n- Premium subscription: Unlimited cameras\n### Q: Do I need a subscription to use the cameras?"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 6,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "**A**: No, basic camera functionality works without a subscription:\n- Live view\n- Motion detection alerts\n- Local storage to MicroSD card\n- However, cloud video storage and advanced features require a subscription\n### Q: How long is video stored in the cloud?\n**A**: \n- Basic subscription: 1 month\n- Pro subscription: 3 months\n- Premium subscription: 1 year\n### Q: Can I view my cameras on multiple devices?"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 7,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: Can I view my cameras on multiple devices?\n**A**: Yes. The same account can be accessed from multiple smartphones, tablets, and computers. Each device must log in with the account credentials.\n## Privacy & Security\n### Q: Who can view my camera feeds?\n**A**: Only people you explicitly grant access to through the AstraHome app. The primary account holder can add shared users with specific permissions. AstraHome employees cannot view your cameras without your permission or a legal request."
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 8,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: Does the camera record audio?\n**A**: Yes, AstraCam models include built-in microphones. Audio recording can be enabled or disabled in the camera settings. A blue LED indicator shows when the microphone is active.\n### Q: Does the camera have a physical privacy cover?\n**A**: Yes, AstraCam X2 includes a physical camera shutter that slides over the lens. AstraCam X1 does not have a physical shutter but has a software mute switch.\n## Subscription Questions"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 9,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "## Subscription Questions\n### Q: What happens if my subscription payment fails?\n**A**: You'll receive an email notification. Access to cloud features is suspended until payment is updated. You have 7 days to update payment before the account is downgraded to the free tier.\n### Q: Can I switch from monthly to annual billing?\n**A**: Yes. Prorated refund is issued for the remaining monthly time, and the annual subscription begins immediately. Contact billing@astrahome.com to switch."
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 10,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: Do subscriptions auto-renew?\n**A**: Yes, all subscriptions auto-renew unless canceled at least 24 hours before the billing date. You can cancel anytime through the AstraHome app or by contacting support.\n### Q: What's the difference between annual and monthly billing?\n**A**: Annual billing typically offers 2 months free compared to monthly pricing. Annual subscriptions require a 1-year commitment, while monthly subscriptions can be canceled anytime.\n## Troubleshooting"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 11,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "## Troubleshooting\n### Q: My camera is showing as \"offline\" in the app\n**A**: \n1. Check if the camera has power (LED indicator)\n2. Verify WiFi connection - camera requires 2.4GHz\n3. Restart the camera (unplug 10 seconds, plug back in)\n4. Check your internet connection\n5. If still offline, reset the camera to factory settings\n### Q: I'm getting too many motion alerts\n**A**: \n1. Adjust motion detection sensitivity in camera settings"
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 12,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "2. Set motion zones to ignore areas with frequent movement (streets, trees)\n3. Schedule motion detection for specific hours\n4. Use \"Motion Off\" periods (e.g., nights, work hours)\n### Q: Can I share my camera access with family?\n**A**: Yes. In the AstraHome app, go to Settings → Shared Users → Add User. Enter the family member's email address. They'll receive an invitation email to create their own account with access to your cameras."
+  },
+  {
+    "doc_id": "faq.md",
+    "chunk_index": 13,
+    "source_path": "D:\\customer-support-ai\\docs\\faq.md",
+    "file_ext": ".md",
+    "text": "### Q: Can I use AstraHome cameras with other smart home systems?\n**A**: \n- Amazon Alexa: Full integration (view camera feeds on Echo Show, voice commands)\n- Google Assistant: View on Google Nest Hub, voice commands\n- Apple HomeKit: Not currently supported\n- SmartThings: Limited integration via Alexa\n---\n**Can't find your question?** Visit support.astrahome.com/faq for the complete searchable knowledge base, or email your question to support@astrahome.com."
+  },
+  {
+    "doc_id": "pricing.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\pricing.md",
+    "file_ext": ".md",
+    "text": "# Pricing - AstraHome Support\n## One-Time Purchase Costs\n### Individual Products\n| Product | Price | Key Features |\n|---------|-------|-------------|\n| AstraCam X1 | $79.99 | Indoor 1080p camera, motion detection |\n| AstraCam X2 | $129.99 | Indoor/outdoor 2K camera, weather-resistant |\n| AstraPlug P1 | $29.99 | Smart plug with energy monitoring |\n| Home Secure Kit | $199.00 | AstraCam X1 + 2 AstraPlugs (save $30) |\n### Subscription Plans (Monthly Billing)\n| Plan | Price | Included |"
+  },
+  {
+    "doc_id": "pricing.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\pricing.md",
+    "file_ext": ".md",
+    "text": "| Plan | Price | Included |\n|------|-------|----------|\n| Basic | $4.99/month | 1-month cloud storage, 3 camera views |\n| Pro | $9.99/month | 3-month cloud storage, 10 camera views, person detection |\n| Premium | $14.99/month | 1-year cloud storage, unlimited camera views, 24/7 monitoring |\n### Subscription Plans (Annual Billing)\n| Plan | Price (per year) | Included |\n|------|-----------------|----------|\n| Basic | $49.00/year | 1-month cloud storage, 3 camera views |"
+  },
+  {
+    "doc_id": "pricing.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\pricing.md",
+    "file_ext": ".md",
+    "text": "| Pro | $99.00/year | 3-month cloud storage, 10 camera views, person detection |\n| Premium | $149.00/year | 1-year cloud storage, unlimited camera views, 24/7 financing |\n## Promotions\n- **First-year discount**: 20% off first-year subscription if purchased with a product\n- **Military discount**: 15% off all subscription plans\n- **Referral program**: Refer a friend, get one month free on your subscription\n## Payment Methods\n- Credit/debit cards (Visa, Mastercard, American Express, Discover)"
+  },
+  {
+    "doc_id": "pricing.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\pricing.md",
+    "file_ext": ".md",
+    "text": "- PayPal\n- Amazon Pay\n- bank transfer (for annual subscriptions)\n## Refund Policy\n- **30-day money-back guarantee** on all hardware products\n- Subscription cancellations: pro-rated refund for unused portion\n- Extended warranty purchases: non-refundable after 14 days"
+  },
+  {
+    "doc_id": "product_info.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\product_info.md",
+    "file_ext": ".md",
+    "text": "# Product Information - AstraHome Support\n## Product Lines\n### AstraCam X1\n- 1080p indoor security camera\n- Motion detection with person recognition\n- Night vision up to 30 feet\n- Works with Alexa and Google Assistant\n### AstraCam X2\n- 2K indoor/outdoor security camera\n- Weather-resistant (IP65)\n- Spotlight and siren alarms\n- 3-month free cloud storage\n### AstraPlug P1\n- Smart plug with energy monitoring\n- Remote on/off control via app\n- Schedule automation\n- Works with Matter protocol"
+  },
+  {
+    "doc_id": "product_info.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\product_info.md",
+    "file_ext": ".md",
+    "text": "- Schedule automation\n- Works with Matter protocol\n### Home Secure Kit\n- Includes AstraCam X1 + 2 AstraPlugs\n- Bundled price: $199.00 (save $30 vs. individual pricing)\n- Free 1-year cloud storage included\n## Key Features Across All Products\n- **Mobile app**: iOS and Android apps for remote monitoring\n- **Privacy controls**: Physical camera shutter, microphone mute\n- **Subscription**: Optional cloud storage plans (1-month, 1-year, 2-year)"
+  },
+  {
+    "doc_id": "product_info.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\product_info.md",
+    "file_ext": ".md",
+    "text": "- **Compatibility**: Works with major smart home ecosystems\n- **Setup**: 10-minute guided setup via the AstraHome app\n## Warranty\nAll AstraHome products come with a **1-year limited manufacturer warranty** covering defects in materials and workmanship. Extended warranty plans are available for purchase.\n## Support\nFor product-specific questions, visit support@astrahome.com or call 1-800-ASTRA-HOME."
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "# Refunds & Returns - AstraHome Support\n## Refund Eligibility\n### Hardware Products\n**30-Day Money-Back Guarantee**\n- Applies to all AstraCam and AstraPlug products purchased directly from AstraHome\n- Product must be in original condition with all accessories\n- Original packaging is preferred but not required\n- Damage from misuse or accidents is not covered\n**How to Request a Refund**\n1. Contact support@astrahome.com with your order number\n2. Include photos of the product condition"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "2. Include photos of the product condition\n3. State the reason for return\n4. A prepaid return shipping label will be emailed within 2 business days\n3. Ship the product within 14 days of receiving the label\n4. Refund is processed within 5-7 business days after receipt\n### Exceptions Not Covered\n- Products used beyond 30 days from delivery\n- Missing accessories or original packaging\n- Damage from improper installation or accidents\n- Products modified or tampered with"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Products modified or tampered with\n- Software or subscription fees (see below)\n### Installation Services\n- Professional installation fees are non-refundable\n- Workmanship warranty: 90 days from installation date\n- Issues due to incompatible wiring or network conditions are not covered\n## Subscription Refunds\n### Pro-Rated Refunds\n- Cancellations during billing period: unused portion is pro-rated\n- Example: Cancel halfway through a monthly plan = 50% refund"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Annual plan cancellations: refund for full remaining months\n- Promotional discounts are pro-rated based on the discounted amount\n### Non-Refundable Items\n- Extended warranty purchases (after 14-day cooling-off period)\n- One-time setup or installation fees\n- Penalty fees for early termination\n- Refunds for policy violations or abuse of the return program\n## Return Process\n### Step 1: Initiate\n- Email support@astrahome.com with \"Refund Request\" in subject"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 4,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Include: order number, reason for return, photos if applicable\n- Customer service will confirm eligibility within 2 business days\n### Step 2: Ship\n- Use the prepaid shipping label provided\n- Include all accessories and documentation\n- Ship within 14 days of label issuance\n- Keep the tracking number for your records\n### Step 3: Receive Refund\n- Inspection: 3-5 business days after product receipt\n- Refund method: original payment method (3-5 business days processing)"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 5,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Email confirmation sent when refund is processed\n- See full bank statement update: 5-10 business days\n## Complaints & Escalation\n### How to File a Complaint\n1. Email complaints@astrahome.com with a detailed description\n2. Include: order number, product, issue description, photos/videos if applicable\n3. Initial response within 2 business days\n4. Full investigation within 5 business days\n### Escalation Rules\n**Level 1**: Customer service representative (initial contact)"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 6,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Response time: 2 business days\n- Resolution scope: standard issues, returns, basic troubleshooting\n**Level 2**: Senior support specialist\n- Escalation trigger: Level 1 cannot resolve, or issue involves $200+ value\n- Response time: 3 business days\n- Resolution scope: complex technical issues, partial refunds\n**Level 3**: Management/Executive escalation\n- Escalation trigger: Level 2 cannot resolve, or issue involves $500+ value, or customer requests executive contact"
+  },
+  {
+    "doc_id": "refunds.md",
+    "chunk_index": 7,
+    "source_path": "D:\\customer-support-ai\\docs\\refunds.md",
+    "file_ext": ".md",
+    "text": "- Response time: 5 business days\n- Resolution scope: full refunds, account credits, significant policy exceptions\n### Escalation Contact\nIf you have not received a response within the stated timeframes, or if your issue remains unresolved, you may:\n- Call 1-800-ASTRA-HOME and ask for the escalations department\n- Email executive-relations@astrahome.com\n- Write to: AstraHome Customer Escalations, 123 Tech Park Drive, San Jose, CA 95134"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 0,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "# Technical Troubleshooting - AstraHome Support\n## Connectivity Issues\n### Camera Won't Connect to WiFi\n**Symptoms**: Camera appears offline in app, fails during setup\n**Solutions**:\n1. **Check WiFi signal**: Camera requires minimum -50 dBm signal strength\n   - Move router closer or use WiFi extender\n   - Avoid 5GHz band (cameras support 2.4GHz only)\n2. **Restart devices**: Unplug camera for 10 seconds, restart router"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 1,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "3. **Correct password**: Ensure WiFi password is entered correctly (case-sensitive)\n4. **Router settings**: Disable MAC filtering temporarily; enable WPA2-PSK\n**If still not working**: \n- Reset camera to factory settings (hold reset button 10 seconds)\n- Re-run setup flow in the AstraHome app\n- Contact support if issue persists\n### App Can't Discover Camera\n**Symptoms**: App cannot find camera on network during initial setup\n**Solutions**:\n1. Ensure phone and camera are on the same WiFi network"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 2,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "2. Check that phone's Bluetooth is enabled (required for initial setup)\n3. Disable VPN or firewall temporarily\n4. Restart the AstraHome app completely (close and reopen)\n### Slow Live View\n**Symptoms**: Laggy or buffering video stream\n**Solutions**:\n1. **Check internet upload speed**: Minimum 2 Mbps required for 1080p\n2. **Reduce resolution**: Switch from 1080p to 720p in camera settings\n3. **Close other bandwidth-using apps**: Streaming, downloads, other cameras"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 3,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "4. **Router QoS**: Enable quality-of-service prioritization for the camera\n## Device Setup\n### Factory Reset\n**Hard reset**: Press and hold the reset button on the camera for 10 seconds\n- LED will flash amber rapidly during reset\n- Wait 2 minutes for camera to reboot\n- Re-run setup in the AstraHome app\n### Firmware Updates\n**Automatic updates**: Cameras check for updates every 24 hours\n- Ensure camera remains connected to WiFi\n- Do not disconnect during update (may take 10-15 minutes)"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 4,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "- Manual check: Settings → Firmware Update in the AstraHome app\n**If firmware update fails**:\n1. Check internet connection\n2. Ensure sufficient storage on camera (minimum 100MB free)\n3. Try manual update via the AstraHome app\n4. Contact support if issue persists\n## Audio Issues\n### No Sound from Camera\n**Symptoms**: Video plays but no audio\n**Solutions**:\n1. Check microphone mute setting in camera app\n2. Verify computer/smartphone audio output is selected"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 5,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "3. Test with a different browser or mobile device\n4. Restart the camera and viewing device\n### Echo or Feedback\n**Symptoms**: Echo during two-way audio communication\n**Solutions**:\n1. Use headphones instead of device speakers\n2. Move camera away from reflective surfaces\n3. Reduce speaker volume\n4. Enable \"Mute microphone when not speaking\" in settings\n## Power Issues\n### Camera Won't Power On\n**Symptoms**: No LED indicator, camera unresponsive\n**Solutions**:\n1. Check power adapter connection"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 6,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "**Solutions**:\n1. Check power adapter connection\n2. Try a different power outlet\n3. Use only the included power adapter (5V/2A minimum)\n4. Try USB power bank (minimum 5V/2A)\n### Intermittent Power Loss\n**Symptoms**: Camera randomly goes offline\n**Solutions**:\n1. Check power cable for damage\n2. Try a different power outlet\n3. Use a surge protector (not a power strip)\n4. If using PoE, verify injector is functioning\n## Network Configuration\n### Port Requirements"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 7,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "## Network Configuration\n### Port Requirements\nAstraHome cameras require the following ports for outbound connectivity:\n- **443 (HTTPS)**: All traffic for cloud connectivity\n- **123 (NTP)**: Time synchronization\n- **53 (DNS)**: Domain name resolution\nThese ports must be allowed from the camera to the internet (no inbound port forwarding required).\n### Firewall Restrictions\nCorporate or guest networks may block required ports:\n- Use a personal hotspot as an alternative"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 8,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "- Use a personal hotspot as an alternative\n- Contact network administrator to whitelist AstraHome domains\n- AstraHome domains: *.astrahome.com, *.amazonaws.com (for AWS services)\n## Device Specifications\n### AstraCam X1\n- Power: 5V/1A via USB adapter\n- WiFi: 2.4GHz only\n- Storage: MicroSD card slot (up to 128GB)\n- Video: 1080p at 30fps\n- Audio: Built-in microphone, speaker\n### AstraCam X2\n- Power: 12V/1A barrel jack\n- WiFi: 2.4GHz/5GHz dual-band\n- Storage: MicroSD card slot (up to 256GB)"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 9,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "- Storage: MicroSD card slot (up to 256GB)\n- Video: 2K at 30fps HDR\n- Audio: Dual microphone, speaker\n### AstraPlug P1\n- Power: 120V AC (direct plug-in)\n- Connectivity: WiFi 2.4GHz\n- Power monitoring: 0.5W - 1800W\n- Remote control: On/off scheduling\n## Helpful Commands\n### Ping Camera IP\n```\nping 192.168.1.44\n```\n### traceroute\n```\ntraceroute 192.168.1.44\n```\n### Check WiFi signal\n```\nnmcli device wifi signal\n```\n---"
+  },
+  {
+    "doc_id": "technical_troubleshooting.md",
+    "chunk_index": 10,
+    "source_path": "D:\\customer-support-ai\\docs\\technical_troubleshooting.md",
+    "file_ext": ".md",
+    "text": "```\nnmcli device wifi signal\n```\n---\n**Still need help?** Visit support.astrahome.com for live chat, or email support@astrahome.com for personalized assistance."
+  }
+]
